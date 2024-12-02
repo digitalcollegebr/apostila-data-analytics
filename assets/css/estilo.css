@@ -1,0 +1,1092 @@
+/* Importa a fonte Montserrat */
+@import url('https://fonts.cdnfonts.com/css/montserrat');
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* A_S - Root - Begin */
+:root {
+    --FonteMontserrat: 'Montserrat', sans-serif !important;
+
+    /* Todas cores */
+    --CorDC01: #35C560;
+    --CorDC02: #623CEA;
+    --CorDC03: #F9E784;
+    --CorDC04: #02394A;
+    --CorDC05: #0B39B4;
+    --CorPreta: #000000;
+    --CorBranca: #FFF;
+
+    /* Cor Topicos e Subtopicos */
+    --CorTopico: var(--CorDC01);
+    --CorSubtopico: var(--CorDC04);
+
+    /* Cor Caixas */
+    --CorApresentacao: #623CEA;
+
+    --CorImportante: #ff0000;
+    --CorImportanteClaro: #ffe2d7;
+
+    --CorFiqueAtento: #f1a923;
+    --CorFiqueAtentoClaro: #fdefd4;
+
+    --CorReflita: #65d1e7;
+    --CorReflitaClaro: #d7f8ff;
+
+    --CorExemplo: #32e1d9;
+    --CorExemploClaro: #d7ffdd;
+
+    --CorSaibaMais: #36a5b1;
+    --CorSaibaMaisClaro: #d6fbff;
+
+    --CorCuriosidade: #435266;
+    --CorCuriosidadeClaro: #d3e5fd;
+
+    --CorResumo: #c79d60;
+    --CorResumoClaro: #fdecd3;
+}
+/* A_S - Root - End */
+
+/* A_S - Begin */
+
+/* A_S - Layout - BEGIN */
+.container-fluid {
+    transition: .5s;
+}
+
+
+
+  
+/* Navbar preto */
+.navbarpreto {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: var(--CorPreta);
+    z-index: 4;
+}
+
+* {
+    font-family: var(--FonteMontserrat);
+    font-weight: light;
+}
+
+/* Back to top */
+#BackToTop {
+    text-decoration: none !important;
+    display: inline-block;
+    background-color: var(--CorDC01);
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    border-radius: 50px;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    transition: background-color .3s, opacity .5s, visibility .5s;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1000;
+}
+#BackToTop::after {
+    content: "\f077";
+    font-family: FontAwesome;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 2em;
+    line-height: 50px;
+    color: #fff;
+}
+#BackToTop:hover {
+    cursor: pointer;
+    background-color: var(--CorPreta);
+}
+#BackToTop:active {
+    background-color: #555;
+}
+#BackToTop.show {
+    opacity: 1;
+    visibility: visible;
+}
+/* A_S - Layout - END */
+
+/* A_S - Textos - BEGIN */
+.Titulo {
+    font-family: var(--FonteMontserrat);
+    font-size: 2rem;
+    color: var(--CorTopico);
+    border-bottom: 1px solid rgb(185, 185, 185);
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+.Texto {
+    font-family: var(--FonteMontserrat);
+    font-size: 1.3rem !important;
+    word-wrap: break-word; /* Quebra palavras longas para evitar overflow */
+    max-width: 100%; /* Garante que o parágrafo não exceda a largura do contêiner */
+}
+/* A_S - Textos - END */
+
+/* A_S - Box - BEGIN */
+.BoxApresentacao {
+    background-color: var(--CorApresentacao);
+    font-size: 1.5rem !important;
+    color: var(--CorBranca);
+    border-radius: 13px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 7px 13px;
+    padding: 1rem;
+    text-align: center;
+}
+.BoxRosa {
+    padding: 18px;
+    border-radius: 13px 13px;
+    background-color: var(--CorDC01);
+    color: var(--CorBranca);
+    margin: 1.5em 0;
+}
+.BoxAmarelo {
+    padding: 18px;
+    border-radius: 13px 13px;
+    background-color: var(--CorDC03);
+    color: #0c343d;
+    margin: 1.5em 0;
+}
+/* A_S - Box - END */
+
+/* A_S - Listas - BEGIN */
+.Lista li {
+    line-height: 30px;
+}
+/* A_S - Listas - END */
+
+/* A_S - Accordions - BEGIN */
+.Accordion {
+    border-radius: 13px 13px 16px 16px;
+    background-image: linear-gradient(to right, var(--CorDC01), var(--CorDC02));
+}
+.accordion-button {
+    background-image: linear-gradient(to right, var(--CorDC01), var(--CorDC02));
+    padding: 8px 19px;
+    border-radius: 13px;
+    color: white !important;
+    font-size: 1.3rem !important;
+    border: none;
+    border-color: transparent;
+    box-shadow: none !important;
+}
+.accordion-content {
+    background-color: #d5f2de;
+    font-size: 1.3em;
+    padding: 15px;
+    border-radius: 0 0 13px 13px;
+    font-weight: 200 !important;
+}
+/* A_S - Accordions - END */
+
+/* A_S - Caixas - BEGIN */
+.Caixa {
+    padding: 10px 20px;
+    font-size: 1.4em;
+    border-radius: 13px 13px 0px 0px;
+}
+.CaixaConteudo {
+    padding: 18px;
+    border-radius: 0px 0px 13px 13px;
+    background-color: #fef8f1;
+}
+.TituloImportante {
+    background-color: var(--CorImportante);
+    color: #fff;
+}
+.ConteudoImportante {
+    background-color: var(--CorImportanteClaro);
+}
+
+.TituloFiqueAtento {
+    background-color: var(--CorFiqueAtento);
+    color: #fff;
+}
+.ConteudoFiqueAtento {
+    background-color: var(--CorFiqueAtentoClaro);
+}
+
+.TituloReflita {
+    background-color: var(--CorReflita);
+    color: #fff;
+}
+.ConteudoReflita {
+    background-color: var(--CorReflitaClaro);
+}
+
+.TituloExemplo {
+    background-color: var(--CorExemplo);
+    color: #fff;
+}
+.ConteudoExemplo {
+    background-color: var(--CorExemploClaro);
+}
+
+.TituloSaibaMais {
+    background-color: var(--CorSaibaMais);
+    color: #fff;
+}
+.ConteudoSaibaMais {
+    background-color: var(--CorSaibaMaisClaro);
+}
+
+.TituloCuriosidade {
+    background-color: var(--CorCuriosidade);
+    color: #fff;
+}
+.ConteudoCuriosidade {
+    background-color: var(--CorCuriosidadeClaro);
+}
+
+.TituloResumo {
+    background-color: var(--CorResumo);
+    color: #fff;
+}
+.ConteudoResumo {
+    background-color: var(--CorResumoClaro);
+}
+/* A_S - Caixas - END */
+
+/* A_S - Code - BEGAN */
+
+.container-code {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto; /* Centraliza o container */
+    box-sizing: border-box; /* Inclui padding e border no width total */
+}
+.small-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    width: 50%;
+    margin: 0 auto; /* Centraliza o container */
+    box-sizing: border-box; /* Inclui padding e border no width total */
+}
+
+.code-section, .text-section {
+    flex: 1;
+    box-sizing: border-box; /* Inclui padding e border no width total */
+}
+
+.code-section {
+    margin-right: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #f7f1f1;
+    padding: 10px;
+}
+
+.text-section {
+    padding-left: 20px;
+}
+
+.typewriter {
+    font-family: monospace;
+    width: 100%;
+    max-width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    border-radius: 8px;
+    border-right: 2px solid #f8f8f2; /* Cor do cursor */
+    font-size: 18px;
+    line-height: 1.5;
+    animation: typing 6s steps(60, end), blink-caret 0.75s step-end infinite;
+}
+
+.console {
+    position: relative;
+    padding: 10px 20px;
+    width: 60%;
+    font-size: 18px;
+    line-height: 1.5;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin: 0 auto; /* Centraliza horizontalmente */
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    display: block;
+    background-color: #20191c;
+    color: #1de203;
+}
+
+
+.code-smaller{
+    width: 65%;
+    height: 0.5%;
+    font-size: 18px;
+    line-height: 1.5;
+    background-color: #f7f1f1;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding-left: 20px;
+    border-radius: 8px;
+    padding-top: 10px;
+}
+
+.typewriter-small {
+    position: relative;
+
+    width: 60%;
+    font-size: 18px;
+    line-height: 1.5;
+    background-color: #f7f1f1;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin: 0 auto; /* Centraliza horizontalmente */
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    display: block;
+}
+.copy-btn {
+    position: absolute;
+    top: 10px;
+    left: 75%; /* Botão fixado à esquerda */
+    background-color: transparent;
+    border: none;
+    color: #333;
+    font-size: 18px;
+}
+.copy-btn:hover {
+    font-size: 10px;
+    background-color: transparent;
+}
+
+
+
+/* Media Queries para telas menores */
+@media (max-width: 768px) {
+    .typewriter-small, .console {
+        width: 80%;
+        font-size: 16px; /* Ajusta o tamanho da fonte para telas menores */
+        padding: 8px 16px; /* Ajusta o padding para telas menores */
+    }
+}
+
+@media (max-width: 480px) {
+    .typewriter-small, .console {
+        font-size: 10px; /* Ajuste do tamanho da fonte para telas muito pequenas */
+        padding: 6px 12px; /* Ajusta o padding para telas muito pequenas */
+    }
+    .copy-btn {
+        font-size: 6px; /* Ajuste do tamanho da fonte para telas muito pequenas */
+        left: 50%; /* Ajuste da posição do botão para telas muito pequenas */
+    }
+}
+
+@media (max-width: 540px) {
+    .typewriter-small, .console {
+        font-size: 10px; /* Ajuste do tamanho da fonte para telas muito pequenas */
+        padding: 6px 10px; /* Ajusta o padding para telas muito pequenas */
+    }
+    .copy-btn {
+        font-size: 6px; /* Ajuste do tamanho da fonte para telas muito pequenas */
+        left: 45%; /* Ajuste da posição do botão para telas muito pequenas */
+    }
+}
+
+
+
+@media (max-width: 715px) {
+    .typewriter-small, .console  {
+        font-size: 10px; /* Ajuste do tamanho da fonte para telas muito pequenas */
+        padding: 6px 10px; /* Ajusta o padding para telas muito pequenas */
+    }
+    .copy-btn {
+        font-size: 10px; /* Ajuste do tamanho da fonte para telas muito pequenas */
+        left: 45%; /* Ajuste da posição do botão para telas muito pequenas */
+    }
+}
+
+
+.code-color {
+    color: #35C560;
+}
+.blue-code{
+    color: #258eff;
+}
+
+.dark_blue_code{
+    color: #0B39B4;
+}
+.orange-code{
+    color: #f3260b;
+}
+.red-color{
+    color: #b31414;
+}
+.comment{
+    color: #717171;
+    
+}
+.green-code{
+    color: #1b942a;
+}
+
+
+
+.keyboard {
+    padding: 10px 15px;
+    background-color: #df1771;
+    color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 4px #00000050;
+    font-family: "Courier New", Courier, monospace;
+    font-weight: bold;
+    display: inline-block;
+    border: 1px solid #000000;
+    text-align: center;
+    user-select: none;
+}
+
+pre {
+    margin: 0;
+    padding: 0;
+    white-space: pre-wrap; /* Mantém a formatação do texto */
+    font-size: 21px;
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: #f8f8f2; }
+}
+
+/* Media Queries para telas menores */
+@media (max-width: 768px) {
+    .container-code {
+        flex-direction: column;
+    }
+    .code-section {
+        margin-right: 0;
+        margin-bottom: 20px; /* Espaço entre as seções em dispositivos móveis */
+    }
+    .text-section {
+        padding-left: 0;
+    }
+    .typewriter {
+        font-size: 16px; /* Ajuste do tamanho da fonte para telas menores */
+    }
+}
+
+@media (max-width: 480px) {
+    .typewriter {
+        font-size: 14px; /* Maior ajuste do tamanho da fonte para telas muito pequenas */
+    }
+}
+/* Container principal */
+.attecion {
+    display: flex;
+    align-items: flex-start; /* Alinha os itens no início verticalmente */
+}
+
+/* Título */
+.notice {
+    padding-top: 40px;
+    padding-left: 30px;
+    font-weight: bold;
+    color: #333;
+    /* Garante que o .notice tenha a mesma altura vertical que .notice-side */
+    display: flex;
+    align-items: flex-start; /* Alinha o texto no início verticalmente */
+}
+
+/* Barra de separação */
+.separator {
+    width: 3px; /* Largura da barra de separação */
+    background-color: #e00000; /* Cor da barra de separação */
+    margin: 0 10px; /* Espaçamento horizontal ao redor da barra */
+}
+
+/* Conteúdo ao lado */
+.notice-side {
+    padding: 10px;
+    background-color: #f7f1f1;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    /* Garante que o .notice-side tenha a mesma altura vertical que .notice */
+    display: flex;
+    align-items: flex-start; /* Alinha o conteúdo no início verticalmente */
+}
+#especial-text {
+    padding-top: 20px;
+
+}
+#especial-texto {
+    padding-top: 20px;
+    padding-left: 50px;
+
+}
+
+#small-notice{
+    padding-top: 15px;
+}
+
+
+ul {
+    list-style: none; /* Remove marcadores padrão */
+    padding-left: 0; /* Remove padding padrão */
+}
+ul li {
+    position: relative;
+    padding-left: 30px; /* Espaço para o novo marcador */
+}
+ul li::before {
+    content: ''; /* Adiciona um marcador vazio */
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%); /* Centraliza verticalmente */
+    width: 10px; /* Largura do marcador */
+    height: 10px; /* Altura do marcador */
+    border-radius: 50%; /* Faz o marcador ser um círculo */
+    background-color: #35C560; /* Cor do marcador */
+}
+
+.next-page{
+    color: #35C560;
+}
+
+.video-container {
+    position: relative;
+    width: 320px;
+    height: 320px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+
+/* Footer */
+
+.container-main {
+    min-height: 100vh;
+    margin-bottom: 50px;
+  }
+
+.Footer {
+  width: 100%;
+  background-color: var(--CorPreta) !important;
+  padding: 20px 0;
+  text-align: center;
+  clear: both;
+  margin-top: 200px;
+}
+
+
+.Footer img {
+    max-width: 150px;
+    height: auto; 
+    margin-bottom: 10px; 
+}
+
+.Footer p {
+    color: #fff; /* Cor do texto no footer */
+    margin: 0; 
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .Footer img {
+        max-width: 120px; /* Ajusta o tamanho da imagem em telas menores */
+    }
+}
+
+@media (max-width: 576px) {
+    .Footer img {
+        max-width: 100px; /* Ajusta ainda mais o tamanho da imagem em telas muito pequenas */
+    }
+}
+.Subtopico{
+    font-size: 1.3rem
+}
+
+.image-container {
+    background-color: #f7f1f1;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    overflow: hidden;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.5s ease, filter 0.5s ease;
+}
+
+.image-container:hover img {
+    transform: scale(1.05);
+}
+
+.container-side {
+    display: flex;
+    align-items: center;
+    justify-content: space-between
+}
+
+.image-side {
+    margin: 0;
+    padding: 0;
+  }
+  
+  
+
+.image-side img {
+    width: 400px; /* Defina o tamanho da imagem conforme necessário */
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    overflow: hidden;
+        display: block;
+        margin: 0 ;
+    
+    transform: scale(1.05);
+}
+
+.text {
+    text-align: left;
+    padding-right: 20px; /* Espaçamento entre o texto e a imagem */
+}
+
+/* Ajuste o container-side para telas menores */
+@media (max-width: 768px) {
+    .container-side {
+        flex-direction: column;
+        align-items: center; /* Centraliza o conteúdo */
+        text-align: center; /* Centraliza o texto */
+    }
+
+    .text {
+        padding-right: 0;
+        margin-bottom: 15px; /* Adiciona espaço abaixo do texto */
+    }
+
+    .image-side img {
+        width: 100%; /* Faz com que a imagem ocupe 100% da largura do container */
+        height: auto; /* Mantém a proporção da imagem */
+        max-width: 100%; /* Garante que a imagem não ultrapasse a largura do container */
+    }
+}
+
+/* Centralizar a imagem e tornar responsiva */
+.image-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    overflow: hidden;
+}
+
+.image-content img {
+    max-width: 50%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.5s ease, filter 0.5s ease;
+}
+
+.image-content:hover img {
+    transform: scale(1.05);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 18px;
+    font-family: 'Arial', sans-serif;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+}
+
+
+/* Media Queries para telas menores */
+@media (max-width: 768px) {
+    .image-content {
+        margin: 20px 10px;
+    }
+    
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 25px 0;
+        font-size: 18px;
+        font-family: 'Arial', sans-serif;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+        overflow-x: auto;
+        display: block;
+    }
+
+    
+}
+
+
+thead tr {
+    background-color: #c51967;
+    color: #ffffff;
+    text-align: left;
+    font-weight: bold;
+}
+
+thead th {
+    padding: 12px 15px;
+}
+
+tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+tbody tr:last-of-type {
+    border-bottom: 2px solid #c51967;
+}
+
+tbody td {
+    padding: 12px 15px;
+}
+
+tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+table caption {
+    caption-side: bottom;
+    padding: 10px;
+    font-weight: bold;
+    color: #666;
+}
+
+
+
+/* A_S - End */
+
+
+
+#quizForm {
+    width: 80%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.question {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fff;
+}
+
+.question p {
+    margin: 5px 0;
+}
+
+.question label {
+    margin-left: 10px;
+}
+
+button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.question.unanswered {
+    border: 2px solid red; /* Highlight unanswered questions */
+}
+
+.navbar{
+    background-color: black;
+    padding: 20px 0;
+}
+
+.nQuestion{
+    color: #c51967;
+}
+
+#errorAlert {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+    border-radius: 5px;
+    padding: 15px;
+    margin: 20px 0;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+#errorAlert strong {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+#errorAlert span {
+    flex-grow: 1;
+}
+
+#errorAlert::before {
+    content: "\26A0"; /* Unicode for warning sign */
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+button {
+    background-color:#c51967;
+    color: #fff;
+    padding: 12px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+        width: 100%;
+        max-width: 200px;
+    transition: 0.3s;
+
+}
+
+.button {
+    background-color:#c51967;
+    color: #fff;
+    padding: 12px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+    width: 200px;
+    height: auto;
+    text-align: center;
+    margin: 0 auto;
+    transition: background-color 0.3s ease;
+    margin-bottom: 20px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.button:hover {
+    transform: scale(1.1);
+    color: white;
+    text-decoration: none;
+    background-color: #ba1477;
+}
+
+button:hover {
+    background-color: #ba1477;
+    transform: scale(1.1);
+}
+
+.question {
+    margin-bottom: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fafafa;
+    transition: border-color 0.3s ease;
+}
+
+.question.unanswered {
+    border-color: #dc3545; /* Highlight unanswered questions with red */
+    background-color: #fff5f5; /* Light red background */
+}
+
+.resultado {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+.resultado.nota-alta {
+    border-color: #28a745;
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.resultado.nota-baixa {
+    border-color: #dc3545;
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+.questoes-erradas {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    font-family: Arial, sans-serif;
+}
+
+.questoes-erradas h3 {
+    margin-top: 0;
+    font-size: 1.5em;
+    color: #333;
+}
+
+.questoes-erradas table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.questoes-erradas table, .questoes-erradas th, .questoes-erradas td {
+    border: 1px solid #ddd;
+}
+
+.questoes-erradas th, .questoes-erradas td {
+    padding: 10px;
+    text-align: left;
+}
+
+.questoes-erradas th {
+    background-color: #c51967;
+    color: #ffffff;
+}
+
+.questoes-erradas tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.questoes-erradas tr:hover {
+    background-color: #f1f1f1;
+}
+
+.button-prox {
+    position: absolute;
+    cursor: pointer;
+    display: block;
+    width: 100px;
+    height: auto;
+    text-decoration: none;
+    transition: 0.3s;
+    right: 0;
+}
+
+.button-prox:hover {
+    transform: scale(1.1);
+    color: #c51967;
+    text-decoration: none;
+
+}
+
+.next{
+    width:40px ;
+    
+}
+
+.left{
+    width:40px ;
+}
+
+
+.button-left{
+    padding: 10px;
+    cursor: pointer;
+    display: block;
+    width: 100px;
+    height: auto;
+    text-decoration: none;
+    transition: 0.3s;
+    right: 0;
+}
+
+.button-left:hover {
+    transform: scale(1.1);
+    color: #2dc519;
+    text-decoration: none;
+
+}
+a{
+    text-decoration: none;
+    color: #c51967;
+}
+
+.button-prox-atv {
+    position: absolute;
+    cursor: pointer;
+    display: block;
+    width: 100px;
+    height: auto;
+    text-decoration: none;
+    transition: 0.3s;
+    right: 0;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.button-prox-atv:hover {
+    transform: scale(1.1);
+    color: #c51967;
+    text-decoration: none;
+}
+
+/* Tooltip */
+.button-prox-atv .tooltip {
+    visibility: hidden; /* Tooltip escondido por padrão */
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px;
+    position: absolute;
+    top: -35px; /* Ajuste a posição da tooltip */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70px;
+    font-size: 14px;
+    opacity: 0;
+    transition: opacity 0.3s;
+    white-space: nowrap; /* Evita que o texto quebre em várias linhas */
+}
+
+/* Exibe a tooltip ao passar o mouse */
+.button-prox-atv:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+}
